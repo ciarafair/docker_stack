@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  dash:
+    container_name: dash
+    image: mauricenino/dashdot:latest
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - '80:3001'
+    volumes:
+      - /:/mnt/host:ro
+    environment:
+      DASHDOT_WIDGET_LIST: ram,cpu,storage,network
+      DASHDOT_SHOW_HOST: true
+      DASHDOT_NETWORK_LABEL_LIST: type,speed_up,speed_down,interface_speed,public_ip

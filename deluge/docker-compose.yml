@@ -1,0 +1,23 @@
+---
+version: "2.1"
+services:
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Etc/UTC
+      - DELUGE_LOGLEVEL=info #optional
+    volumes:
+      - /deluge/config:/config
+      - /media:/media
+      - /media/shows:/media/shows
+      - /media/movies:/media/movies
+      - /media/movies:/media/torrents
+      - /local/template/iso:/images
+    ports:
+      - 8112:8112
+      - 6882:6882
+      - 6882:6882/udp
+    restart: unless-stopped

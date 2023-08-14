@@ -1,0 +1,20 @@
+---
+version: "2.1"
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Etc/UTC
+    volumes:
+      - /jellyfin/config:/config
+      - /media/shows:/data/tvshows
+      - /media/movies:/data/movies
+      - /media/music:/data/music
+      - /media/books:/data/books
+    ports:
+      - 8096:8096
+
+    restart: unless-stopped
