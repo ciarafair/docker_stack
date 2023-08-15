@@ -2,11 +2,11 @@
 
 # Applications
 
-## Administration
+## Monitoring
 
-- [Cockpit](/cockpit/README.md)
+- [Dash](/dash/README.md)
 
-- [Portainer](/portainer/README.md)
+- [Homarr](/homarr/README.md)
 
 ## Media Hosting
 
