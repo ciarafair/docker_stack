@@ -13,8 +13,7 @@ services:
       - /media/shows:/data/tvshows
       - /media/movies:/data/movies
       - /media/music:/data/music
-      - /media/books:/data/books
-			- /media:/media
+      - /media:/media
     ports:
       - 8096:8096
 
