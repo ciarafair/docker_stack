@@ -12,6 +12,8 @@ services:
     volumes:
       - /qbittorrent/config:/config
       - /media:/media
+      - /media/movies:/media/movies
+      - /media/shows:/media/shows
       - /local/template/iso:/images
 
     ports:
