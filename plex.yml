@@ -16,7 +16,7 @@ services:
       - /media/shows:/media/tvshows
       - /media/movies:/media/movies
       - /media/music:/media/music
-      - /media/books:/media/books
+      - /media:/media
     restart: unless-stopped
     ports:
       - 32400:32400
