@@ -11,7 +11,6 @@ services:
       - DELUGE_LOGLEVEL=info #optional
     volumes:
       - /deluge/config:/config
-      - /media:/
       - /media/shows:/shows
       - /media/movies:/movies
       - /media/torrents:/torrents
