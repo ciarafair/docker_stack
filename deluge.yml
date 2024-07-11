@@ -15,7 +15,7 @@ services:
       - /media/shows:/shows
       - /media/movies:/movies
       - /media/torrents:/torrents
-			- /media/incomplete:/incomplete
+      - /media/incomplete:/incomplete
       - /local/template/iso:/images
     ports:
       - 8112:8112

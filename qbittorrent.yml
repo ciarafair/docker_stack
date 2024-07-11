@@ -14,7 +14,7 @@ services:
       - /media:/
       - /media/movies:/movies
       - /media/shows:/shows
-			- /media/incomplete:/incomplete
+      - /media/incomplete:/incomplete
       - /media/torrents:/torrents
       - /local/template/iso:/images
 
