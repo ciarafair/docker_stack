@@ -11,10 +11,11 @@ services:
       - DELUGE_LOGLEVEL=info #optional
     volumes:
       - /deluge/config:/config
-      - /media:/media
-      - /media/shows:/media/shows
-      - /media/movies:/media/movies
-      - /media/movies:/media/torrents
+      - /media:/
+      - /media/shows:/shows
+      - /media/movies:/movies
+      - /media/torrents:/torrents
+			- /media/incomplete:/incomplete
       - /local/template/iso:/images
     ports:
       - 8112:8112

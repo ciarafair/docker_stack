@@ -11,9 +11,10 @@ services:
       - WEBUI_PORT=9880
     volumes:
       - /qbittorrent/config:/config
-      - /media:/media
-      - /media/movies:/media/movies
-      - /media/shows:/media/shows
+      - /media:/
+      - /media/movies:/movies
+      - /media/shows:/shows
+			- /media/incomplete:/incomplete
       - /local/template/iso:/images
 
     ports:
