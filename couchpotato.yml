@@ -9,7 +9,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - couchpotato/config:/config
+      - /couchpotato/config:/config
       - /media/incomplete:/downloads
       - /media/movies:/movies
       - /media/shows:/shows
