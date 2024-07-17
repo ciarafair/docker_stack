@@ -12,6 +12,7 @@ services:
       - /media/movies:/movies
       - /media/movies:/shows
       - /media/incomplete:/downloads
+      - /media:/data
     ports:
       - 7878:7878
     restart: unless-stopped
