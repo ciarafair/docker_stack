@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  couchpotato:
+    image: lscr.io/linuxserver/couchpotato
+    container_name: couchpotato
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - couchpotato/config:/config
+      - /media/incomplete:/downloads
+      - /media/movies:/movies
+      - /media/shows:/shows
+    ports:
+      - 5050:5050
+    restart: unless-stopped
