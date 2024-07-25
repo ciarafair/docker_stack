@@ -16,13 +16,13 @@ services:
       SPOTIFY_PUBLIC: 07e1601f812648f3859ddadb823c2bb2
       SPOTIFY_SECRET: /run/secrets/spotify_secret
   mongo:
-    container_name: mongo
+    container_name: spotify_mongo
     image: mongo:6
     volumes:
       - /your_spotify_db:/data/db
 
   web:
-    container_name: mongo
+    container_name: your_spotify
     image: yooooomi/your_spotify_client
     restart: always
     ports:
