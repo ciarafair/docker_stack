@@ -13,7 +13,7 @@ services:
       - CORS=http://localhost:80,https://localhost:443
       - MONGO_ENDPOINT=mongodb://mongo:27017/your_spotify
     ports:
-      - 80:80
+      - 8383:80
       - 443:443
 secrets:
   spotify_secret:
