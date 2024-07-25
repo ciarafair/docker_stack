@@ -10,7 +10,7 @@ services:
       - APP_URL=http://localhost:8383
       - SPOTIFY_PUBLIC=07e1601f812648f3859ddadb823c2bb2
       - SPOTIFY_SECRET=/run/secrets/spotify_secret
-      - CORS=http://localhost:80,https://localhost:443
+      - CORS=http://localhost:8383,https://localhost:443
       - MONGO_ENDPOINT=mongodb://mongo:27017/your_spotify
     ports:
       - 8383:80
