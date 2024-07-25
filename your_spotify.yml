@@ -1,20 +1,35 @@
----
+version: "3"
+
 services:
-  your_spotify:
-    image: lscr.io/linuxserver/your_spotify:latest
-    container_name: your_spotify
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - APP_URL=http://localhost:8383
-      - SPOTIFY_PUBLIC=07e1601f812648f3859ddadb823c2bb2
-      - SPOTIFY_SECRET=/run/secrets/spotify_secret
-      - CORS=http://localhost:8383,https://localhost:443
-      - MONGO_ENDPOINT=mongodb://mongo:27017/your_spotify
+  server:
+    image: yooooomi/your_spotify_server
+    restart: always
     ports:
-      - 8383:80
-      - 443:443
+      - "8080:8080"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    environment:
+      API_ENDPOINT: http://127.0.0.1:8080
+      CLIENT_ENDPOINT: http://127.0.0.1:3000
+      SPOTIFY_PUBLIC: 07e1601f812648f3859ddadb823c2bb2
+      SPOTIFY_SECRET: /run/secrets/spotify_secret
+  mongo:
+    container_name: spotify_mongo
+    image: mongo:6
+    volumes:
+      - /your_spotify_db:/data/db
+
+  web:
+    container_name: your_spotify
+    image: yooooomi/your_spotify_client
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      API_ENDPOINT: http://127.0.0.1:8080
+
 secrets:
   spotify_secret:
     file: /secrets/SPOTIFY_SECRET
