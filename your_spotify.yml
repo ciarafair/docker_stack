@@ -12,8 +12,8 @@ services:
     depends_on:
       - mongo
     environment:
-      API_ENDPOINT: https://myspotify.ismyserveron.net
-      CLIENT_ENDPOINT: http://localhost:3000
+      API_ENDPOINT: https://yourserver.ismyserveron.net
+      CLIENT_ENDPOINT: https://myspotify.ismyserveron.net
       SPOTIFY_PUBLIC: 07e1601f812648f3859ddadb823c2bb2
       SPOTIFY_SECRET: /run/secrets/spotify_secret
   mongo:
@@ -28,7 +28,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      API_ENDPOINT: https://myspotify.ismyserveron.net
+      API_ENDPOINT: https://yourserver.ismyserveron.net
 secrets:
   spotify_secret:
     file: /secrets/SPOTIFY_SECRET
