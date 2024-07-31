@@ -18,6 +18,9 @@ services:
       SPOTIFY_SECRET: /run/secrets/spotify_secret
       CORS: all
       MONGO_ENDPOINT: mongodb://mongo:27017/your_spotify
+      networks:
+        YourSpotify:
+          ipv4_address: 192.168.50.4
 
   mongo:
     restart: always
@@ -27,6 +30,9 @@ services:
       - /your_spotify_db:/data/db
     ports:
      - 27017:27017
+    networks:
+      YourSpotify:
+        ipv4_address: 192.168.50.2
 
   web:
     container_name: client
@@ -36,6 +42,9 @@ services:
       - "3000:3000"
     environment:
       API_ENDPOINT: https://yourserver.ismyserveron.net/
+    networks:
+      YourSpotify:
+        ipv4_address: 192.168.50.3
 
 secrets:
   spotify_secret:
