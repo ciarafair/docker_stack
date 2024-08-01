@@ -16,8 +16,7 @@ services:
       CLIENT_ENDPOINT: https://myspotify.ismyserveron.net/
       SPOTIFY_PUBLIC: 07e1601f812648f3859ddadb823c2bb2
       SPOTIFY_SECRET: /run/secrets/spotify_secret
-      CORS: all
-      MONGO_ENDPOINT: mongodb://mongo:27017/your_spotify
+      MONGO_ENDPOINT: mongodb://192.168.50.3:27017/your_spotify
     networks:
       YourSpotify:
         ipv4_address: 192.168.50.4
