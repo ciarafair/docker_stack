@@ -39,7 +39,7 @@ services:
     image: yooooomi/your_spotify_client
     restart: always
     ports:
-      - "8181:8181"
+      - "8181:3000"
     environment:
       - API_ENDPOINT=https://yourserver.ismyserveron.net/
     networks:
