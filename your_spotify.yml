@@ -48,6 +48,7 @@ services:
 
 networks:
   YourSpotify:
+    external: true
     driver: bridge
     ipam:
      config:
