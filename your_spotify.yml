@@ -49,9 +49,9 @@ services:
 networks:
   YourSpotify:
     external: true
-    driver: bridge
     ipam:
-     config:
+      driver: bridge
+      config:
        - subnet: 192.168.50.0/24
          gateway: 192.168.50.1
 
