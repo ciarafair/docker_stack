@@ -20,7 +20,7 @@ services:
       MONGO_ENDPOINT: mongodb://mongo:27017/your_spotify
     networks:
       YourSpotify:
-        ip4_address: 192.168.50.4
+        ipv4_address: 192.168.50.4
 
   mongo:
     restart: always
@@ -32,7 +32,7 @@ services:
      - 27017:27017
     networks:
       YourSpotify:
-        ip4_address: 192.168.50.3
+        ipv4_address: 192.168.50.3
 
   web:
     container_name: client
@@ -44,7 +44,7 @@ services:
       API_ENDPOINT: https://yourserver.ismyserveron.net/
     networks:
       YourSpotify:
-        ip4_address: 192.168.50.2
+        ipv4_address: 192.168.50.2
 
 networks:
   YourSpotify:
