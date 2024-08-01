@@ -18,9 +18,9 @@ services:
       SPOTIFY_SECRET: /run/secrets/spotify_secret
       CORS: all
       MONGO_ENDPOINT: mongodb://mongo:27017/your_spotify
-      networks:
-        YourSpotify:
-          ip4_address: 192.168.50.4
+    networks:
+      YourSpotify:
+        ip4_address: 192.168.50.4
 
   mongo:
     restart: always
