@@ -35,7 +35,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      API_ENDPOINT: https://yourserver.ismyserveron.net
+      API_ENDPOINT: https://yourserver.ismyserveron.net/
 
 secrets:
   spotify_secret:
