@@ -18,6 +18,7 @@ services:
       SPOTIFY_SECRET: /run/secrets/spotify_secret
       MONGO_ENDPOINT: mongodb://192.168.50.3:27017/your_spotify
       CORS: https://yourspotify.ismyerveron.net, https://yourserver.ismyserveron.net
+      CORS: all
     networks:
       YourSpotify:
         ipv4_address: 192.168.50.4
