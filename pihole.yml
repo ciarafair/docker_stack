@@ -19,3 +19,6 @@ services:
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
+networks:
+      home_network:
+        driver: bridge
