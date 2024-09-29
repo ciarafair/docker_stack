@@ -5,10 +5,10 @@ services:
     container_name: pihole
     image: pihole/pihole:latest
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "67:67/udp"
-      - "8080:80/tcp"
+      - "2853:53/tcp"
+      - "2853:53/udp"
+      - "2867:67/udp"
+      - "2880:80/tcp"
     environment:
       TZ: 'America/Chicago'
       WEBPASSWORD: $WEBPASSWORD_SECRET
