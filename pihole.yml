@@ -2,6 +2,9 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
+    networks:
+      home_network:
+        ipv4_address: $IP_ADDRESS
     ports:
       - "2853:53/tcp"
       - "2853:53/udp"
@@ -16,3 +19,7 @@ services:
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
+
+networks:
+      home_network:
+        driver: ipvlan
