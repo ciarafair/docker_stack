@@ -23,6 +23,5 @@ services:
 networks:
       home_network:
         driver: ipvlan
-        config:
-          - subnet: 192.168.20.0/24
-            gateway: 192.168.20.1
+        subnet: 192.168.20.0/24
+        gateway: 192.168.20.1
