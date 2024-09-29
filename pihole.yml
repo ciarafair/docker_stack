@@ -8,7 +8,8 @@ services:
     container_name: pihole
     image: pihole/pihole:latest
     networks:
-      - home_network
+        home_network:
+          ipv4_address: 192.168.20.4
     ports:
       - "2853:53/tcp"
       - "2853:53/udp"
