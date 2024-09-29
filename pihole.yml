@@ -1,8 +1,4 @@
 services:
-  networks:
-    home_network:
-      name: home_network
-      external: true
 
   pihole:
     container_name: pihole
@@ -24,3 +20,8 @@ services:
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
+
+networks:
+  home_network:
+    name: home_network
+    external: true
