@@ -3,7 +3,12 @@
     "dnsmasq",
     "ipam",
     "ipvlan",
+    "jellyfin",
+    "lscr",
+    "nicolargo",
+    "PGID",
     "pihole",
+    "PUID",
     "WEBPASSWORD"
   ]
 }
