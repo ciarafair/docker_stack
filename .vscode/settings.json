@@ -1,14 +1,20 @@
 {
   "cSpell.words": [
     "dnsmasq",
+    "fallenbagel",
+    "hotio",
     "ipam",
     "ipvlan",
+    "jackett",
     "jellyfin",
+    "jellyseerr",
     "lscr",
     "nicolargo",
     "PGID",
     "pihole",
     "PUID",
+    "radarr",
+    "sonarr",
     "WEBPASSWORD"
   ]
 }
