@@ -17,7 +17,8 @@ services:
       - /media/incomplete:/incomplete
       - /media/torrents:/torrents
       - /local/template/iso:/images
+    networks:
+      - torrent-network
 networks:
-  custom:
-    external:
-      name: torrent-network
+  torrent-network:
+    external: true

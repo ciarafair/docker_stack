@@ -22,7 +22,8 @@ services:
       - 6881:6881
       - 6881:6881/udp
     restart: unless-stopped
+    networks:
+      - torrent-network
 networks:
-  custom:
-    external:
-      name: torrent-network
+  torrent-network:
+    external: true

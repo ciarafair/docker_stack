@@ -18,7 +18,8 @@ services:
     ports:
       - 7878:7878
     restart: unless-stopped
+    networks:
+      - torrent-network
 networks:
-  custom:
-    external:
-      name: torrent-network
+  torrent-network:
+    external: true

@@ -19,3 +19,7 @@ services:
 secrets:
   password:
     file: /secrets/FLAME_PASS
+networks:
+  custom:
+    external:
+      name: torrent-network

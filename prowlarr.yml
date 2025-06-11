@@ -11,7 +11,8 @@ services:
     ports:
       - 9696:9696
     restart: unless-stopped
+    networks:
+      - torrent-network
 networks:
-  custom:
-    external:
-      name: torrent-network
+  torrent-network:
+    external: true

@@ -17,7 +17,9 @@ services:
       - 8096:8096
 
     restart: unless-stopped
+    networks:
+      - torrent-network
 networks:
-  custom:
-    external:
-      name: custom
+  torrent-network:
+    external: true
+
