@@ -1,0 +1,27 @@
+services:
+
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    networks:
+        home_network:
+          ipv4_address: 192.168.20.4
+    ports:
+      - "2853:53/tcp"
+      - "2853:53/udp"
+      - "2867:67/udp"
+      - "2880:80/tcp"
+    environment:
+      TZ: 'America/Chicago'
+      WEBPASSWORD: $WEBPASSWORD_SECRET
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+
+networks:
+  home_network:
+    name: home_network
+    external: true

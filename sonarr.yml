@@ -10,5 +10,10 @@ services:
       - UMASK=002
       - TZ=Etc/UTC
     volumes:
-      - /sonarr:/config
-      - /media:/data
+      - /sonarr/config:/config
+      - /media/movies:/movies
+      - /media/shows:/shows
+      - /media/music:/music
+      - /media/incomplete:/incomplete
+      - /media/torrents:/torrents
+      - /local/template/iso:/images

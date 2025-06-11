@@ -10,10 +10,9 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /jellyfin/config:/config
-      - /media:/media
-      - /media/movies:/media/movies
-      - /media/shows:/media/shows
-      - /media/music:/media/music
+      - /media/movies:/movies
+      - /media/shows:/shows
+      - /media/music:/music
     ports:
       - 8096:8096
 
