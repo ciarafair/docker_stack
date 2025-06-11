@@ -4,6 +4,8 @@ services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
+    networks:
+      - torrent-network
     environment:
       - PUID=1000
       - PGID=1000

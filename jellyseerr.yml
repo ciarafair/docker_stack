@@ -3,6 +3,8 @@ services:
     jellyseerr:
        image: fallenbagel/jellyseerr:latest
        container_name: jellyseerr
+       networks:
+            - torrent-network
        environment:
             - LOG_LEVEL=debug
             - TZ=Asia/Tashkent
