@@ -3,8 +3,6 @@ services:
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
-    networks:
-      - torrent-network
     environment:
       - PUID=1000
       - PGID=1000
@@ -20,3 +18,7 @@ services:
     ports:
       - 7878:7878
     restart: unless-stopped
+networks:
+  custom:
+    external:
+      name: torrent-network

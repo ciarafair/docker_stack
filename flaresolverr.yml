@@ -13,3 +13,7 @@ services:
     ports:
       - "8191:8191"
     restart: unless-stopped
+networks:
+  custom:
+    external:
+      name: torrent-network

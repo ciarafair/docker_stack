@@ -4,8 +4,6 @@ services:
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
-    networks:
-      - torrent-network
     environment:
       - PUID=0
       - PGID=0
@@ -19,3 +17,7 @@ services:
       - 8096:8096
 
     restart: unless-stopped
+networks:
+  custom:
+    external:
+      name: custom

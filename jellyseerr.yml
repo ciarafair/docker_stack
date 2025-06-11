@@ -3,8 +3,6 @@ services:
     jellyseerr:
        image: fallenbagel/jellyseerr:latest
        container_name: jellyseerr
-       networks:
-            - torrent-network
        environment:
             - LOG_LEVEL=debug
             - TZ=Asia/Tashkent
@@ -17,3 +15,7 @@ services:
             - /media/shows:/media/shows
             - /media/music:/media/music
        restart: unless-stopped
+networks:
+  custom:
+    external:
+      name: torrent-network

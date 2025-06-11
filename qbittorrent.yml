@@ -4,8 +4,6 @@ services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
-    networks:
-      - torrent-network
     environment:
       - PUID=1000
       - PGID=1000
@@ -24,3 +22,7 @@ services:
       - 6881:6881
       - 6881:6881/udp
     restart: unless-stopped
+networks:
+  custom:
+    external:
+      name: torrent-network

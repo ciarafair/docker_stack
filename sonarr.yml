@@ -2,8 +2,6 @@ services:
   sonarr:
     container_name: sonarr
     image: ghcr.io/hotio/sonarr
-    networks:
-          - torrent-network
     ports:
       - "8989:8989"
     environment:
@@ -19,3 +17,7 @@ services:
       - /media/incomplete:/incomplete
       - /media/torrents:/torrents
       - /local/template/iso:/images
+networks:
+  custom:
+    external:
+      name: torrent-network
