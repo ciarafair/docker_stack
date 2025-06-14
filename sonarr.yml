@@ -18,7 +18,8 @@ services:
       - /media/torrents:/torrents
       - /local/template/iso:/images
     networks:
-      - torrent-network
+      torrent-network:
+        ipv4_address: 172.20.10.133
 networks:
   torrent-network:
     external: true

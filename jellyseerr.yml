@@ -16,7 +16,8 @@ services:
             - /media/music:/media/music
        restart: unless-stopped
        networks:
-            - torrent-network
+        torrent-network:
+          ipv4_address: 172.20.10.132
 networks:
   torrent-network:
     external: true

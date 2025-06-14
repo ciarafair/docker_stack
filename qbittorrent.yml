@@ -23,7 +23,9 @@ services:
       - 6881:6881/udp
     restart: unless-stopped
     networks:
-      - torrent-network
+      torrent-network:
+        ipv4_address: 172.20.10.130
+
 networks:
   torrent-network:
     external: true

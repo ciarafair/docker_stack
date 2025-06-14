@@ -12,7 +12,8 @@ services:
       - 9696:9696
     restart: unless-stopped
     networks:
-      - torrent-network
+      torrent-network:
+        ipv4_address: 172.20.10.135
 networks:
   torrent-network:
     external: true
