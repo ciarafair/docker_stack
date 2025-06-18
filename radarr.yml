@@ -13,6 +13,7 @@ services:
       - /media/shows:/shows
       - /media/music:/music
       - /media/incomplete:/incomplete
+      - /media/complete:/complete
       - /media/torrents:/torrents
       - /local/template/iso:/images
       - /media:/media
