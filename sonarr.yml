@@ -1,3 +1,4 @@
+---
 services:
   sonarr:
     container_name: sonarr
@@ -17,6 +18,7 @@ services:
       - /media/incomplete:/incomplete
       - /media/torrents:/torrents
       - /local/template/iso:/images
+      - /media:/media
     networks:
       torrent-network:
         ipv4_address: 172.20.10.133

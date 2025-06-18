@@ -8,13 +8,14 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /radarr/config:/config
+      - /sonarr/config:/config
       - /media/movies:/movies
       - /media/shows:/shows
       - /media/music:/music
       - /media/incomplete:/incomplete
       - /media/torrents:/torrents
       - /local/template/iso:/images
+      - /media:/media
     ports:
       - 7878:7878
     restart: unless-stopped
