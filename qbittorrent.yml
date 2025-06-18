@@ -13,7 +13,9 @@ services:
       - /qbittorrent/config:/config
       - /media/movies:/movies
       - /media/shows:/shows
+      - /media:/media
       - /media/incomplete:/incomplete
+      - /media/complete:/complete
       - /media/torrents:/torrents
       - /local/template/iso:/images
 
